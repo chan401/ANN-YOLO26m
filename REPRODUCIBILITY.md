@@ -8,10 +8,10 @@
 
 ## EMPIAR-10028
 
-**The reported EMPIAR-10028 benchmark uses the frozen test set `test_100_v1` with 100 micrographs and 8,830 annotated particles.** The final set comprises the 44 original test micrographs plus 56 additional held-out micrographs. Training and validation use the original 132 and 44 micrographs, respectively. The three methods use the same test set and ground truth, with one-to-one matching at 56 pixels in the native image grid.
+**The reported EMPIAR-10028 benchmark uses the frozen test set `test_100_v1` with 100 micrographs and 8,830 annotated particles.** Training and validation use 132 and 44 micrographs, respectively. The three methods use the same test set and ground truth, with one-to-one matching at 56 pixels in the native image grid.
 
 - [Final test membership](manifests/empiar10028/test_100_v1/test.txt) lists the exact 100 micrographs used for the reported comparison.
-- [Test manifest](manifests/empiar10028/test_100_v1/test_manifest.csv) records per-image annotation counts and file checksums. [Selection protocol](manifests/empiar10028/test_100_v1/selection_protocol.json) records how the additional images were selected.
+- [Test manifest](manifests/empiar10028/test_100_v1/test_manifest.csv) records per-image annotation counts and file checksums.
 - [Frozen evaluation configuration](experiments/empiar10028/config/frozen_config.json) records the validation-selected thresholds and points to the final test manifest.
 
 The snapshots preserve the original Linux directory layout. On a dedicated reproduction machine, place the dataset under `/root/autodl-tmp/cryoem_datasets/EMPIAR-10028` or adapt the path constants in a working copy. Within that root:
@@ -27,7 +27,7 @@ python experiments/empiar10028/train/train.py --epochs 80 --batch 4 --lr 0.002
 python experiments/empiar10028/train/select_checkpoints.py --run standard_m_p3p5
 ```
 
-The selector checks checkpoints on the 44 validation micrographs. Its selection rule and candidate paths are recorded in the script. The frozen 100-image run uses `test/ann_test_inference.py` and `test/evaluate_test100.py` from the original experiment directory `experiments/test_100_v1_three_methods/code/` under the dataset root. `data/prepare_test_100_v1.py` records the original preparation of the expanded test and shared GT. Install crYOLO and Topaz separately if reproducing the full three-method comparison. Use the versions, checkpoints, adapters and per-method thresholds in `config/frozen_config.json`. The test scripts verify the frozen seal and hashes. Recreate the recorded layout and inputs to replay the original run. For a separate retrained run, create a separate validation-derived freeze with `test/freeze_test.py` before opening the test set.
+The selector checks checkpoints on the 44 validation micrographs. Its selection rule and candidate paths are recorded in the script. The frozen 100-image run uses `test/ann_test_inference.py` and `test/evaluate_test100.py` from the original experiment directory `experiments/test_100_v1_three_methods/code/` under the dataset root. `data/prepare_test_100_v1.py` records the preparation of the 100-image test set and shared ground truth. Install crYOLO and Topaz separately if reproducing the full three-method comparison. Use the versions, checkpoints, adapters and per-method thresholds in `config/frozen_config.json`. The test scripts verify the frozen seal and hashes. Recreate the recorded layout and inputs to replay the original run. For a separate retrained run, create a separate validation-derived freeze with `test/freeze_test.py` before opening the test set.
 
 ## Related datasets: EMPIAR-10017 and EMPIAR-10291
 
