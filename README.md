@@ -15,27 +15,22 @@ python -m zipfile -e runtime/ultralytics_runtime_source.zip runtime/extracted
 export PYTHONPATH="$PWD/runtime/extracted${PYTHONPATH:+:$PYTHONPATH}"
 ```
 
-## 2. Download a trained checkpoint
+## 2. Download the pretrained model
 
-| Checkpoint | Intended use | Inference configuration |
-| --- | --- | --- |
-| [Generalization v2](https://github.com/chan401/ANN-YOLO26m/releases/download/paper-inference-v1/ann-yolo26m-generalization-v2.pt) | Default model trained on seven source datasets | [v2 config](inference/v2/model_configuration.json) |
-| [Generalization v3 low-SNR](https://github.com/chan401/ANN-YOLO26m/releases/download/paper-inference-v1/ann-yolo26m-generalization-v3-low-snr.pt) | v2 continued with source-side contrast and noise augmentation | [v3 config](inference/v3_low_snr/model_configuration.json) |
-
-Each inference script checks the weight file against the SHA-256 in its configuration. See the [submission release](https://github.com/chan401/ANN-YOLO26m/releases/tag/paper-inference-v1) for the full checksums.
+[Download ANN-YOLO26m-General.pt](https://github.com/chan401/ANN-YOLO26m/releases/download/paper-inference-v2/ANN-YOLO26m-General.pt), the recommended checkpoint for general particle picking. It was trained on seven source datasets. The inference script checks its SHA-256 against the included configuration.
 
 ## 3. Run particle picking
 
-Save the v2 checkpoint in the repository root or update the path passed to `--weights`.
+Save the downloaded checkpoint in the repository root or update the path passed to `--weights`.
 
 ```bash
 python inference/v2/predict_particles.py \
   --config inference/v2/model_configuration.json \
-  --weights ann-yolo26m-generalization-v2.pt \
+  --weights ANN-YOLO26m-General.pt \
   --input /path/to/micrographs \
-  --output picks-v2 --device 0
+  --output picks --device 0
 ```
 
-For v3, use the script and configuration under `inference/v3_low_snr/` with the v3 checkpoint. The input can be an MRC file or a directory of MRC micrographs. Output includes per-image TXT coordinates and a combined predictions CSV. TXT coordinates are zero-based in the original MRC array (x is column, y is row). The CSV also includes CryoPPP coordinates and scores.
+The input can be an MRC file or a directory of MRC micrographs. Output includes per-image TXT coordinates and a combined predictions CSV. TXT coordinates are zero-based in the original MRC array (x is column, y is row). The CSV also includes CryoPPP coordinates and scores.
 
 For the paper's experiment settings, input manifests and evaluation workflow, see [Reproducibility](REPRODUCIBILITY.md). The [runtime license](runtime/LICENSE) applies to the archived Ultralytics runtime.
