@@ -131,34 +131,6 @@
     "sha256": "1c257d7851dd25cd37939e8a632b9f8bb30ab0d6e3c5a3b5d584281c947b87e8",
     "snapshot": "cryoem_datasets/EMPIAR-10028/manifests/test_100_v1/test_manifest.csv"
   },
-  "experiments/empiar10017/convert_10017_mrc2048_to_yolo.py": {
-    "sha256": "f78bd945a2e5077141ad1fcab51bd7e938229b9cf1bb15e9528eac19aa0af313",
-    "snapshot": "cryoem_annyolo26/tools/convert_10017_mrc2048_to_yolo.py"
-  },
-  "experiments/empiar10017/convert_yolo_pred_to_xy.py": {
-    "sha256": "25e8caa5b6f468edcd539e0bb5b9ae4a6ba21b1233d0beca523b8abad3304f35",
-    "snapshot": "cryoem_annyolo26/tools/convert_yolo_pred_to_xy.py"
-  },
-  "experiments/empiar10017/evaluate_particle_picking.py": {
-    "sha256": "3ff68f626836f401f54711b5e7cb472223160daf2750aaf35035826312d670a9",
-    "snapshot": "cryoem_annyolo26/tools/evaluate_particle_picking.py"
-  },
-  "experiments/empiar10017/run_yolo26m_10017_e100_workflow.py": {
-    "sha256": "9024c63375bb40ea06248f404f916706bb39c33276baf64ac83dfcf1c7dbe3de",
-    "snapshot": "cryoem_annyolo26/tools/run_yolo26m_10017_e100_workflow.py"
-  },
-  "experiments/empiar10017/run_yolo26m_10017_e100_nomosaic_workflow.py": {
-    "sha256": "ceb9262bd2496a02ad852a843d0cfd7bd39acea38ba0949fa23b3fc926b55bdf",
-    "snapshot": "cryoem_annyolo26/tools/run_yolo26m_10017_e100_nomosaic_workflow.py"
-  },
-  "experiments/empiar10017/run_yolo26m_10017_e150_mosaic05_safe_workflow.py": {
-    "sha256": "7e733adf1a96724498133f865a7eabd9711935aab7a32a51342c86ec7a562d34",
-    "snapshot": "cryoem_annyolo26/tools/run_yolo26m_10017_e150_mosaic05_safe_workflow.py"
-  },
-  "experiments/empiar10017/export_10017_yolo26_predictions_to_box.py": {
-    "sha256": "95cf2d4e43946bb4e501492fb28fa9c071317e1b33dad56077a8292b3014280d",
-    "snapshot": "cryoem_annyolo26/scripts/export_10017_yolo26_predictions_to_box.py"
-  },
   "experiments/generalization/v1/code/bootstrap_catalogs.py": {
     "sha256": "a42198cc912e7455279779713cf79a64cfc50254a6b9c2e0270627b9dff33226",
     "snapshot": "cryoem_generalization/v1/code/bootstrap_catalogs.py"

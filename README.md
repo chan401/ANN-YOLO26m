@@ -33,4 +33,4 @@ python inference/v2/predict_particles.py \
 
 The input can be an MRC file or a directory of MRC micrographs. Output includes per-image TXT coordinates and a combined predictions CSV. TXT coordinates are zero-based in the original MRC array (x is column, y is row). The CSV also includes CryoPPP coordinates and scores.
 
-For the paper's experiment settings, input manifests and evaluation workflow, see [Reproducibility](REPRODUCIBILITY.md). The [runtime license](runtime/LICENSE) applies to the archived Ultralytics runtime.
+The paper's EMPIAR-10028 comparison uses the [frozen 100-micrograph test set](manifests/empiar10028/test_100_v1/test.txt). See [Reproducibility](REPRODUCIBILITY.md) for the experiment settings and evaluation workflow. The [runtime license](runtime/LICENSE) applies to the archived Ultralytics runtime.

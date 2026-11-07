@@ -8,7 +8,11 @@
 
 ## EMPIAR-10028
 
-The frozen v3 split has 132 train, 44 validation and 44 original test micrographs. The final test expands the original test to 100 micrographs without changing train or validation. The final matching radius is 56 pixels in the native grid.
+**The reported EMPIAR-10028 benchmark uses the frozen test set `test_100_v1` with 100 micrographs and 8,830 annotated particles.** The final set comprises the 44 original test micrographs plus 56 additional held-out micrographs. Training and validation use the original 132 and 44 micrographs, respectively. The three methods use the same test set and ground truth, with one-to-one matching at 56 pixels in the native image grid.
+
+- [Final test membership](manifests/empiar10028/test_100_v1/test.txt) lists the exact 100 micrographs used for the reported comparison.
+- [Test manifest](manifests/empiar10028/test_100_v1/test_manifest.csv) records per-image annotation counts and file checksums. [Selection protocol](manifests/empiar10028/test_100_v1/selection_protocol.json) records how the additional images were selected.
+- [Frozen evaluation configuration](experiments/empiar10028/config/frozen_config.json) records the validation-selected thresholds and points to the final test manifest.
 
 The snapshots preserve the original Linux directory layout. On a dedicated reproduction machine, place the dataset under `/root/autodl-tmp/cryoem_datasets/EMPIAR-10028` or adapt the path constants in a working copy. Within that root:
 
@@ -25,6 +29,13 @@ python experiments/empiar10028/train/select_checkpoints.py --run standard_m_p3p5
 
 The selector checks checkpoints on the 44 validation micrographs. Its selection rule and candidate paths are recorded in the script. The frozen 100-image run uses `test/ann_test_inference.py` and `test/evaluate_test100.py` from the original experiment directory `experiments/test_100_v1_three_methods/code/` under the dataset root. `data/prepare_test_100_v1.py` records the original preparation of the expanded test and shared GT. Install crYOLO and Topaz separately if reproducing the full three-method comparison. Use the versions, checkpoints, adapters and per-method thresholds in `config/frozen_config.json`. The test scripts verify the frozen seal and hashes. Recreate the recorded layout and inputs to replay the original run. For a separate retrained run, create a separate validation-derived freeze with `test/freeze_test.py` before opening the test set.
 
+## Related datasets: EMPIAR-10017 and EMPIAR-10291
+
+| Dataset | Role and records |
+| --- | --- |
+| EMPIAR-10017 | The later 14-micrograph comparison uses the ANN-YOLO26m method developed for EMPIAR-10028. Its evaluation inputs are listed in the [14-image manifest](manifests/empiar10017/test14.txt). For the supplied coordinate export, the comparison uses 27-pixel one-to-one center matching. The export does not establish the checkpoint or threshold provenance. EMPIAR-10017 also appears as a source dataset in the generalization protocol. |
+| EMPIAR-10291 | Included as a source dataset for generalization. See the [source and target protocol](experiments/generalization/v2/protocol.json) and [image registry](experiments/generalization/v2/image_registry.json) for its documented role and split membership. |
+
 ## Cross-dataset generalization
 
 The research snapshots in `experiments/generalization/` map to `/root/autodl-tmp/cryoem_generalization/{v1,v2,v3_low_snr}`. Use each variant's protocol and image registry to preserve source membership and target batches. The v2 code includes the canonical-scale candidate and the native multiscale branch. The standalone v2 configuration identifies the selected native multiscale checkpoint. The low-SNR continuation initializes from the selected v2 checkpoint and applies source-side contrast and noise augmentation. The standalone v3 configuration identifies the separately fitted low-SNR checkpoint.
@@ -35,7 +46,3 @@ The research snapshots in `experiments/generalization/` map to `/root/autodl-tmp
 - Dataset-specific radii and target memberships are recorded in the corresponding freeze files. HCN1 and TRPV1 experiments must be interpreted using their own frozen variant and batch.
 
 Historical workflow scripts use original paths and some require intermediate outputs of earlier stages. Standalone inference is the direct entry point when the matching fitted checkpoint is available. Use [ANN-YOLO26m-General.pt](https://github.com/chan401/ANN-YOLO26m/releases/download/paper-inference-v2/ANN-YOLO26m-General.pt) with the v2 configuration to reproduce the reported HCN1 run. Use [ANN-YOLO26m-LowSNR.pt](https://github.com/chan401/ANN-YOLO26m/releases/download/paper-inference-v1/ANN-YOLO26m-LowSNR.pt) with the v3 low-SNR configuration to reproduce the reported TRPV1 run. The experiment snapshots and other checkpoint requirements are documented above.
-
-## EMPIAR-10017 historical scripts
-
-`experiments/empiar10017/` preserves the server's training, preprocessing and BOX conversion scripts. The later 14-image export is listed in `manifests/empiar10017/test14.txt`. The exported BOX format uses top-left x, y, width, height, with center `(x+w/2, y+h/2)`. The later visualization used official CryoPPP GT mapped to MRC array coordinates as `y_mrc = H - 1 - y_cryoppp` and 27-pixel maximum-cardinality one-to-one matching. The BOX files alone do not establish which historical checkpoint and validation threshold produced them. Some historical scripts scan thresholds on the test split; treat these scans as historical diagnostics and use a validation-derived threshold for new held-out evaluation.
