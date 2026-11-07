@@ -1,0 +1,2169 @@
+{
+  "status": "PASS",
+  "tile_size": 1536,
+  "tile_starts": [
+    0,
+    1280,
+    2560
+  ],
+  "overlap_px": 256,
+  "ownership_boundaries": [
+    0,
+    1408,
+    2688,
+    4096
+  ],
+  "box_original_px": 224.0,
+  "box_source": "existing confirmed CryoPPP 224px training proxy; not tuned on validation",
+  "normalization": "median, sigma=(P84-P16)/2, clip +/-5 sigma, float32 TIFF lossless",
+  "orientation": "image flipud to CryoPPP axes before tiling; canonical center=(tile_x+x0,tile_y+y0)",
+  "splits": {
+    "train": {
+      "micrographs": 132,
+      "unique_gt": 11592,
+      "tiles": 1188,
+      "tile_labels_with_overlap": 14874,
+      "clipped_boundary_boxes": 2874,
+      "all_gt_have_full_context_tile": true
+    },
+    "val": {
+      "micrographs": 44,
+      "unique_gt": 3824,
+      "tiles": 396,
+      "tile_labels_with_overlap": 4943,
+      "clipped_boundary_boxes": 950,
+      "all_gt_have_full_context_tile": true
+    }
+  },
+  "normalization_parameters": {
+    "066.mrc": {
+      "median": 4534.0,
+      "robust_sigma": 219.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "165.mrc": {
+      "median": 4522.0,
+      "robust_sigma": 219.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "290.mrc": {
+      "median": 4432.0,
+      "robust_sigma": 211.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "084.mrc": {
+      "median": 4468.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "286.mrc": {
+      "median": 4436.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "252.mrc": {
+      "median": 4512.0,
+      "robust_sigma": 220.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "213.mrc": {
+      "median": 4504.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "207.mrc": {
+      "median": 4506.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "164.mrc": {
+      "median": 4536.0,
+      "robust_sigma": 221.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "288.mrc": {
+      "median": 4430.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "097.mrc": {
+      "median": 4490.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "261.mrc": {
+      "median": 4452.0,
+      "robust_sigma": 213.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "166.mrc": {
+      "median": 4536.0,
+      "robust_sigma": 220.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "160.mrc": {
+      "median": 4536.0,
+      "robust_sigma": 223.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "098.mrc": {
+      "median": 4476.0,
+      "robust_sigma": 212.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "341.mrc": {
+      "median": 4488.0,
+      "robust_sigma": 211.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "301.mrc": {
+      "median": 4466.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "306.mrc": {
+      "median": 4468.0,
+      "robust_sigma": 212.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "146.mrc": {
+      "median": 4506.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "182.mrc": {
+      "median": 4482.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "088.mrc": {
+      "median": 4444.0,
+      "robust_sigma": 210.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "181.mrc": {
+      "median": 4482.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "274.mrc": {
+      "median": 4454.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "279.mrc": {
+      "median": 4450.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "234.mrc": {
+      "median": 4520.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "168.mrc": {
+      "median": 4468.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "143.mrc": {
+      "median": 4512.0,
+      "robust_sigma": 221.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "202.mrc": {
+      "median": 4490.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "258.mrc": {
+      "median": 4446.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "211.mrc": {
+      "median": 4504.0,
+      "robust_sigma": 211.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "223.mrc": {
+      "median": 4490.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "078.mrc": {
+      "median": 4304.0,
+      "robust_sigma": 202.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "266.mrc": {
+      "median": 4446.0,
+      "robust_sigma": 209.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "087.mrc": {
+      "median": 4452.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "219.mrc": {
+      "median": 4492.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "271.mrc": {
+      "median": 4454.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "289.mrc": {
+      "median": 4434.0,
+      "robust_sigma": 207.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "156.mrc": {
+      "median": 4522.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "346.mrc": {
+      "median": 4494.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "070.mrc": {
+      "median": 4524.0,
+      "robust_sigma": 220.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "203.mrc": {
+      "median": 4508.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "147.mrc": {
+      "median": 4508.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "139.mrc": {
+      "median": 4520.0,
+      "robust_sigma": 223.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "187.mrc": {
+      "median": 4496.0,
+      "robust_sigma": 219.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "171.mrc": {
+      "median": 4544.0,
+      "robust_sigma": 221.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "269.mrc": {
+      "median": 4472.0,
+      "robust_sigma": 219.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "210.mrc": {
+      "median": 4504.0,
+      "robust_sigma": 220.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "326.mrc": {
+      "median": 4500.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "093.mrc": {
+      "median": 4454.0,
+      "robust_sigma": 213.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "205.mrc": {
+      "median": 4510.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "222.mrc": {
+      "median": 4490.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "184.mrc": {
+      "median": 4500.0,
+      "robust_sigma": 210.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "089.mrc": {
+      "median": 4454.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "348.mrc": {
+      "median": 4490.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "221.mrc": {
+      "median": 4484.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "108.mrc": {
+      "median": 4482.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "358.mrc": {
+      "median": 4490.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "239.mrc": {
+      "median": 4496.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "208.mrc": {
+      "median": 4510.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "148.mrc": {
+      "median": 4510.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "228.mrc": {
+      "median": 4498.0,
+      "robust_sigma": 212.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "299.mrc": {
+      "median": 4462.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "199.mrc": {
+      "median": 4488.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "322.mrc": {
+      "median": 4492.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "130.mrc": {
+      "median": 4492.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "281.mrc": {
+      "median": 4478.0,
+      "robust_sigma": 220.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "356.mrc": {
+      "median": 4498.0,
+      "robust_sigma": 212.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "082.mrc": {
+      "median": 4472.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "167.mrc": {
+      "median": 4462.0,
+      "robust_sigma": 212.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "092.mrc": {
+      "median": 4470.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "257.mrc": {
+      "median": 4504.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "067.mrc": {
+      "median": 4526.0,
+      "robust_sigma": 222.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "305.mrc": {
+      "median": 4480.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "298.mrc": {
+      "median": 4472.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "245.mrc": {
+      "median": 4430.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "304.mrc": {
+      "median": 4472.0,
+      "robust_sigma": 213.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "237.mrc": {
+      "median": 4496.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "317.mrc": {
+      "median": 4524.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "116.mrc": {
+      "median": 4464.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "325.mrc": {
+      "median": 4498.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "294.mrc": {
+      "median": 4466.0,
+      "robust_sigma": 219.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "118.mrc": {
+      "median": 4476.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "200.mrc": {
+      "median": 4494.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "180.mrc": {
+      "median": 4486.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "126.mrc": {
+      "median": 4460.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "331.mrc": {
+      "median": 4530.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "161.mrc": {
+      "median": 4534.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "259.mrc": {
+      "median": 4422.0,
+      "robust_sigma": 212.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "316.mrc": {
+      "median": 4518.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "247.mrc": {
+      "median": 4496.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "204.mrc": {
+      "median": 4506.0,
+      "robust_sigma": 221.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "094.mrc": {
+      "median": 4354.0,
+      "robust_sigma": 209.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "236.mrc": {
+      "median": 4496.0,
+      "robust_sigma": 213.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "310.mrc": {
+      "median": 4524.0,
+      "robust_sigma": 213.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "198.mrc": {
+      "median": 4488.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "141.mrc": {
+      "median": 4456.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "090.mrc": {
+      "median": 4366.0,
+      "robust_sigma": 205.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "192.mrc": {
+      "median": 4516.0,
+      "robust_sigma": 221.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "072.mrc": {
+      "median": 4326.0,
+      "robust_sigma": 208.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "133.mrc": {
+      "median": 4460.0,
+      "robust_sigma": 211.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "188.mrc": {
+      "median": 4494.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "336.mrc": {
+      "median": 4486.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "065.mrc": {
+      "median": 4504.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "217.mrc": {
+      "median": 4496.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "251.mrc": {
+      "median": 4506.0,
+      "robust_sigma": 222.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "159.mrc": {
+      "median": 4522.0,
+      "robust_sigma": 220.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "280.mrc": {
+      "median": 4482.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "233.mrc": {
+      "median": 4518.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "226.mrc": {
+      "median": 4496.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "340.mrc": {
+      "median": 4486.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "190.mrc": {
+      "median": 4498.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "256.mrc": {
+      "median": 4314.0,
+      "robust_sigma": 208.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "107.mrc": {
+      "median": 4482.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "295.mrc": {
+      "median": 4464.0,
+      "robust_sigma": 212.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "359.mrc": {
+      "median": 4486.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "345.mrc": {
+      "median": 4496.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "179.mrc": {
+      "median": 4484.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "144.mrc": {
+      "median": 4512.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "296.mrc": {
+      "median": 4472.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "244.mrc": {
+      "median": 4426.0,
+      "robust_sigma": 212.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "342.mrc": {
+      "median": 4486.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "122.mrc": {
+      "median": 4468.0,
+      "robust_sigma": 213.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "061.mrc": {
+      "median": 4510.0,
+      "robust_sigma": 219.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "214.mrc": {
+      "median": 4508.0,
+      "robust_sigma": 213.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "351.mrc": {
+      "median": 4516.0,
+      "robust_sigma": 213.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "278.mrc": {
+      "median": 4458.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "191.mrc": {
+      "median": 4494.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "246.mrc": {
+      "median": 4428.0,
+      "robust_sigma": 212.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "327.mrc": {
+      "median": 4504.0,
+      "robust_sigma": 213.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "267.mrc": {
+      "median": 4446.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "255.mrc": {
+      "median": 4496.0,
+      "robust_sigma": 220.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "263.mrc": {
+      "median": 4444.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "095.mrc": {
+      "median": 4494.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "178.mrc": {
+      "median": 4488.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "074.mrc": {
+      "median": 4322.0,
+      "robust_sigma": 207.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "272.mrc": {
+      "median": 4456.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "324.mrc": {
+      "median": 4500.0,
+      "robust_sigma": 211.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "262.mrc": {
+      "median": 4444.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "350.mrc": {
+      "median": 4512.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "248.mrc": {
+      "median": 4324.0,
+      "robust_sigma": 207.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "081.mrc": {
+      "median": 4476.0,
+      "robust_sigma": 219.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "138.mrc": {
+      "median": 4470.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "131.mrc": {
+      "median": 4488.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "355.mrc": {
+      "median": 4498.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "183.mrc": {
+      "median": 4502.0,
+      "robust_sigma": 213.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "241.mrc": {
+      "median": 4494.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "243.mrc": {
+      "median": 4380.0,
+      "robust_sigma": 207.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "185.mrc": {
+      "median": 4498.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "069.mrc": {
+      "median": 4522.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "319.mrc": {
+      "median": 4520.0,
+      "robust_sigma": 220.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "063.mrc": {
+      "median": 4508.0,
+      "robust_sigma": 221.5,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "117.mrc": {
+      "median": 4468.0,
+      "robust_sigma": 210.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "330.mrc": {
+      "median": 4494.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "123.mrc": {
+      "median": 4470.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "265.mrc": {
+      "median": 4450.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "291.mrc": {
+      "median": 4450.0,
+      "robust_sigma": 211.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "075.mrc": {
+      "median": 4298.0,
+      "robust_sigma": 206.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "283.mrc": {
+      "median": 4478.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "124.mrc": {
+      "median": 4462.0,
+      "robust_sigma": 213.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "080.mrc": {
+      "median": 4654.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "186.mrc": {
+      "median": 4498.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "282.mrc": {
+      "median": 4474.0,
+      "robust_sigma": 218.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "260.mrc": {
+      "median": 4450.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "277.mrc": {
+      "median": 4458.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "360.mrc": {
+      "median": 4490.0,
+      "robust_sigma": 211.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "120.mrc": {
+      "median": 4466.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "119.mrc": {
+      "median": 4468.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "314.mrc": {
+      "median": 4518.0,
+      "robust_sigma": 217.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "149.mrc": {
+      "median": 4506.0,
+      "robust_sigma": 219.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "091.mrc": {
+      "median": 4466.0,
+      "robust_sigma": 213.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "285.mrc": {
+      "median": 4478.0,
+      "robust_sigma": 216.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "129.mrc": {
+      "median": 4490.0,
+      "robust_sigma": 219.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "284.mrc": {
+      "median": 4476.0,
+      "robust_sigma": 215.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "206.mrc": {
+      "median": 4486.0,
+      "robust_sigma": 214.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "250.mrc": {
+      "median": 4526.0,
+      "robust_sigma": 223.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    },
+    "136.mrc": {
+      "median": 4518.0,
+      "robust_sigma": 221.0,
+      "clip_sigma": 5,
+      "orientation": "flipud MRC array; x_CryoPPP=x_array, y_CryoPPP=4095-y_array",
+      "dtype": "float32",
+      "output_range": [
+        0,
+        1
+      ],
+      "quantization": "none"
+    }
+  },
+  "examples": [
+    {
+      "file": "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/ann_yolo26m_cryo_tiles_v3/images/train/066_x1280_y1280.tif",
+      "float32_exact_roundtrip": true,
+      "unique_values": 1381
+    },
+    {
+      "file": "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/ann_yolo26m_cryo_tiles_v3/images/val/095_x1280_y1280.tif",
+      "float32_exact_roundtrip": true,
+      "unique_values": 1403
+    }
+  ],
+  "test_accessed": false,
+  "manifest_hashes": {
+    "train": "d1d6ab30bb449bd509477281f6ca5349d0d780df429d96cc4237f3c4da6b8a51",
+    "val": "0181a8357e5bb535c0eb1a1256c091b69ef7f05b510abbdeb87ba50404d39161"
+  }
+}

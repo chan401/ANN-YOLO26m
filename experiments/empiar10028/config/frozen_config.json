@@ -1,0 +1,116 @@
+{
+  "frozen": true,
+  "frozen_utc": "2026-10-27T22:05:36.466928+00:00",
+  "configuration": "test_100_v1",
+  "test_images": 100,
+  "test_gt": 8830,
+  "matching_radius_px": 56.0,
+  "matching_implementation": "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/metadata/three_method_evaluation/evaluate_empiar10028_v3_pretrained_val.py",
+  "shared_gt": "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/annotations_standardized/test_100_v1/ground_truth/test100_centers.csv",
+  "methods": {
+    "ANN-YOLO26": {
+      "checkpoint": "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/ann_yolo26m_cryo_tiles_v3/selections/standard_m_p3p5/best.pt",
+      "checkpoint_sha256": "cf98cf13b1a80f3bfb2acdb0222fb36944f74555d00a027a67af7e01da291467",
+      "threshold": 0.24376197159290314,
+      "validation_source": "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/reports/ann_yolo26_cryo_adaptation_v3/selected_model_config.json",
+      "parameters": {
+        "device": 0,
+        "precision": "FP32",
+        "normalization": "median and (P84-P16)/2 robust sigma; +/-5 sigma clipping; no 8-bit quantization",
+        "orientation": "flipud before tiling",
+        "tile_size": 1536,
+        "tile_starts": [
+          0,
+          1280,
+          2560
+        ],
+        "ownership_bounds": [
+          0,
+          1408,
+          2688,
+          4096
+        ],
+        "max_det": 2000,
+        "score_floor": 1e-05,
+        "center_merge_radius_px": 28,
+        "heads": "P3/P4/P5",
+        "TTA": false
+      }
+    },
+    "crYOLO": {
+      "checkpoint": "/root/autodl-tmp/cryoem_baselines/cryolo/weights/gmodel_phosnet_202005_N63_c17.h5",
+      "checkpoint_sha256": "17b374db3b51046511a280ac00f7f0dd5bbf70a16c905f6d8d4e4e2b514faa89",
+      "threshold": 0.6545040607452393,
+      "validation_source": "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/reports/pretrained_baseline_validation_v3/validation_thresholds.json",
+      "parameters": {
+        "device": 0,
+        "precision": "FP32; TF32 disabled",
+        "cryolo_version": "1.9.9",
+        "tensorflow": "1.15.5+nv22.12",
+        "input_size": 1024,
+        "anchor_px": 224,
+        "lowpass": 0.1,
+        "normalization": "STANDARD",
+        "native_nms_iou": 0.3,
+        "score_floor": 0,
+        "prediction_batch_size": 1,
+        "on_the_fly": true,
+        "coordinate_adapter": "x=X+w/2; y=4096-(Y+h/2)"
+      }
+    },
+    "Topaz": {
+      "checkpoint": "/root/autodl-tmp/cryoem_baselines/topaz/topaz/pretrained/detector/resnet16_u64.sav",
+      "checkpoint_sha256": "00d224629a5dc0c2dc122cca11e47c25f5f850d08f9e7f71f54bcf8037d52c46",
+      "threshold": 2.7722246646881104,
+      "validation_source": "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/reports/pretrained_baseline_validation_v3/validation_thresholds.json",
+      "parameters": {
+        "device": 0,
+        "precision": "FP32; TF32 disabled",
+        "topaz_version": "0.3.21",
+        "model": "resnet16_u64",
+        "preprocessing": "same CPU GMM normalization and Fourier downsample8 as validation",
+        "segment_patch_size": 144,
+        "preprocessing_random_seed": 10028,
+        "nms_radius_scaled_px": 14,
+        "nms_device": "CPU",
+        "native_score_floor": "-inf",
+        "up_scale": 8,
+        "coordinate_adapter": "x=x; y=4095-y",
+        "outlier_exception_used": false
+      }
+    }
+  },
+  "test_manifest": "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/manifests/test_100_v1/test.txt",
+  "test_manifest_csv": "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/manifests/test_100_v1/test_manifest.csv",
+  "threshold_selection": "validation only; fixed global threshold per method; no test scan or tuning",
+  "protected_files": {
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/code/baseline_gpu_test.py": "89f4ce4dfe318053e9505f9d57f330b00950def316eed7c43315fc5ae79d9338",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/code/common_test.py": "905df86c8344cee65b89fa155968833e3ad288bc38c8afc4d7bb4654f800b8a5",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/code/evaluate_test100.py": "ad379765ba3cc7b296ba16cfb701ae8634a4d800b08f80749b4bdd5113aa44c9",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/code/freeze_test.py": "bc1fd5936d51bcf3cfee38f3461f428d8b7f4cb314afbf4ac217ef3395f4be51",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/code/setup_adapters.py": "7f48bbfef5c36e8c3dda35f6c7a3b9690a6f31d79de1f0d649c7edd038506932",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/code/workflow_test.py": "4e3f41fd6ead12fca10a643b18d6a31edc7970231bce3870f59d9d75f66d8e42",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/code/baseline_helpers.py": "566ff767dfa228c0a6e2d17051ff4023a60eb9dfebe3b3aae2ec8d6846893ecc",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/code/ann_test_inference.py": "5de3519d5553e128b3302af1eafb6e891957ba842c392a4f84b2d16d549e9d5d",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/topaz_runtime_compat/sitecustomize.py": "2840709f8cfcf2959c1c8996714ea557a5b92e20d4978a792322a64f2ff22de0",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/topaz_preprocess_repro/sitecustomize.py": "9973a88e62ddddfa3b308b9ad9721453d7429c32b3ee8487b2c4fed1093a8e4e",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/adapter_equivalence.json": "9d8027aa4c71596a15091a587c78880190d653677eb713dfc387eb87331ce8f2",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/cryolo_inference_config.json": "63502e993998eee364140b086df6ec441c3439566547d98da4ad4c079cfbcdea",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/topaz_inference_config.json": "b7c05bcd87ecf9b8d0b4d9d903f49f908d1c94fef967c2a0b94806c13fcd19bc",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/ann_yolo26m_cryo_tiles_v3/code/common.py": "68ac2ea11d33cd86152fe28209d03568d9241935ef86117a60f107c33e754237",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/ann_yolo26m_cryo_tiles_v3/code/infer_eval.py": "2b8f89a350054e2a0e4d71d87ebea54da834e90a3a38c43b1092eab90516d7fa",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/reports/ann_yolo26_cryo_adaptation_v3/selected_model_config.json": "ab2a614d1b2dc8492875c52a26a40009d2985eefe000d7596c00fd3c2680a018",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/reports/pretrained_baseline_validation_v3/validation_thresholds.json": "d405602fb8b3aa2647159f6da0265a6e3e10874772dc183105e4ed4b487049bb",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/manifests/test_100_v1/test.txt": "54f0d62992c3cc43214f179436826a3b2a996a424375be0499fd51d08d27ca7d",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/manifests/test_100_v1/test_manifest.csv": "1c257d7851dd25cd37939e8a632b9f8bb30ab0d6e3c5a3b5d584281c947b87e8",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/manifests/test_100_v1/train.txt": "d1d6ab30bb449bd509477281f6ca5349d0d780df429d96cc4237f3c4da6b8a51",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/manifests/test_100_v1/val.txt": "0181a8357e5bb535c0eb1a1256c091b69ef7f05b510abbdeb87ba50404d39161",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/annotations_standardized/test_100_v1/ground_truth/test100_centers.csv": "bd4959c4590b571504bbdf67f36ec29798d8b0b913e01e89a34d0b1a9dc00b26",
+    "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/metadata/three_method_evaluation/evaluate_empiar10028_v3_pretrained_val.py": "bdd6b0438765fadbc5728fb9bc76e33bd9d72e264f6aef7a2841b16331af93ef",
+    "/root/autodl-tmp/cryoem_baselines/gpu_validation_smoke/gpu_cpu_compatibility.json": "b636d6a805bbc41f87ce955fca65d6cad70d026b5d78bc3a2f86e94f8ffe7d5b",
+    "/root/autodl-tmp/cryoem_baselines/cryolo/env-gpu-py38/bin/cryolo_predict_gpu.sh": "87181ab582fb3d12bc1f51ca213ec02071c9490c213f467293ffeb2f2ee48b1f",
+    "/root/autodl-tmp/cryoem_baselines/cryolo/pretrained_baseline/config_lowpass_0p1_box224.json": "836fb4c7e32c275d8f06a5df2f569991fcbf25a85f4ca4c2ae56bcb78ff94c4e"
+  },
+  "GPU_compatibility_proof": "/root/autodl-tmp/cryoem_baselines/gpu_validation_smoke/gpu_cpu_compatibility.json",
+  "pretraining_provenance_caveat": "Topaz packaged pretrained model may include EMPIAR-10028; exact image overlap unknown. crYOLO exact pretraining accession/image overlap unknown. These are pretrained baseline comparisons, not verified fully independent pretraining."
+}

@@ -1,0 +1,33 @@
+{
+  "method": "crYOLO official pretrained general low-pass direct inference",
+  "version": "1.9.9",
+  "python": "3.7.16",
+  "tensorflow": "1.15.4 CPU build",
+  "checkpoint": "/root/autodl-tmp/cryoem_baselines/cryolo/weights/gmodel_phosnet_202005_N63_c17.h5",
+  "input_split": "manifests/test_100_v1/test.txt only",
+  "input_micrograph": "original 4096x4096 MRC",
+  "cryo_config": "/root/autodl-tmp/cryoem_baselines/cryolo/pretrained_baseline/config_lowpass_0p1_box224.json",
+  "filter": [
+    "LOWPASS",
+    0.1
+  ],
+  "box_anchor_px": 224,
+  "cli_confidence_threshold": 0.0,
+  "prediction_batch_size": 1,
+  "cpu_count": 1,
+  "on_the_fly_filtering": true,
+  "coordinate_transform_id": "cryolo-cbox-lower-left-center-to-cryoppp-v2",
+  "coordinate_conversion": "crYOLO postprocessing exports CBOX Y in the opposite vertical-axis convention from CryoPPP. For the 4096x4096 original image: center x=X+Width/2 and center y=4096-(Y+Height/2). Native confidence is unchanged.",
+  "threshold_selection": "Previously fixed validation threshold; no test selection or scan",
+  "configured_max_box_per_image": 700,
+  "configured_max_box_per_image_semantics": "training true-box buffer; not an inference candidate cap",
+  "inference_candidate_count_cap": "no separate cap found in inspected inference path",
+  "prediction_postprocessing": {
+    "fixed_iou_nms_threshold": 0.3,
+    "effective_unfiltered_object_score_cutoff": "> 0.0 when CLI threshold=0.0",
+    "border_incomplete_box_removal": true,
+    "candidate_limitations": "CBOX is confidence-less-filtered output, not raw network proposals; fixed IoU NMS, score > 0, and incomplete-border removal apply."
+  },
+  "execution_device": "GPU:0; FP32; no TensorFloat32",
+  "gpu_id": 0
+}

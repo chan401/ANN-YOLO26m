@@ -1,0 +1,199 @@
+{
+  "protocol_id": "v3-source-low-SNR-TRPV1",
+  "created_unix": 1793370083.7061796,
+  "source_datasets": [
+    "10017",
+    "10028",
+    "10077",
+    "10240",
+    "10289",
+    "10291",
+    "10760"
+  ],
+  "source_train_images": 276,
+  "source_validation_images": 92,
+  "source_registry_sha256": "ada5aac0afd334574cb5fef59d286c31d9e6d82e0f93910e3b583f78104e587f",
+  "HCN1_frozen_archive": "/root/autodl-tmp/cryoem_generalization/archives/HCN1_v2_frozen",
+  "HCN1_result_not_replaced": true,
+  "initial_checkpoint": "/root/autodl-tmp/cryoem_generalization/v2/selections/best.pt",
+  "initial_checkpoint_sha256": "92776d3c11fd1157a012fac6f3c38ba280c8e077b22a18c9c67176cd31703679",
+  "only_new_training_component": "source-only lower-SNR input augmentation before multiscale channels",
+  "augmentation": {
+    "probability": 0.65,
+    "signal_scale": [
+      0.35,
+      0.8
+    ],
+    "independent_gaussian_sigma": [
+      0.02,
+      0.1
+    ],
+    "units": "float intensity [0,1]",
+    "channels_regenerated_after_augmentation": true
+  },
+  "inference_profile_unchanged": "native_multiscale LP4/LP2/raw; 1536 tiles, pad128, overlap256, merge28native,maxdet2000,floor1e-5",
+  "training": {
+    "epochs": 20,
+    "lr": 5e-05,
+    "init": "v2 selected checkpoint",
+    "balanced_tiles_per_domain": 192
+  },
+  "checkpoint_selection": "best/last on same92 source-validation images; maximize 7-domain macro F1 with min-domain F1 >= .55 where feasible; one global threshold",
+  "target_GT_used_for_training_or_selection": false,
+  "target_domains": [
+    "10059",
+    "10081"
+  ],
+  "final_selection": {
+    "seed": 100283,
+    "algorithm": "stable filename sort; exclude ALL v1 and v2 target micrographs; random.Random(seed).shuffle; first20",
+    "candidate_count": 241,
+    "sorted_pool_sha256": "0e07b5cc79eb075e1c7c2ddeea390cbbd5e73749186e8c719f7f930578e1a935"
+  },
+  "files": [
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0196_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0196_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0233_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0233_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0113_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0113_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0249_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0249_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0101_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0101_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0001_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0001_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0281_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0281_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0020_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0020_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0027_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0027_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0066_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0066_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0199_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0199_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0211_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0211_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0223_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0223_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0078_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0078_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0051_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0051_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0023_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0023_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0269_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0269_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0056_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0056_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0168_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0168_2x_dfpt.mrc"
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0161_2x_dfpt.mrc",
+      "diameter": 132,
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0161_2x_dfpt.mrc"
+    }
+  ],
+  "matching": "unchanged maximum-cardinality one-to-one native D/4; TRPV1 radius33px for all methods",
+  "baseline_policy": "reuse unchanged GPU pretrained weights, source92 calibrated thresholds crYOLO .14/Topaz -1.0; no target threshold tuning",
+  "scope": "TRPV1-targeted development with known previous outcomes; new independent micrograph check, not a pristine domain-blind test; HCN1 v2 is a different frozen model version",
+  "final_check_policy": "one final evaluation after model and global threshold freeze; no threshold scans or model selection using final20 outcomes"
+}

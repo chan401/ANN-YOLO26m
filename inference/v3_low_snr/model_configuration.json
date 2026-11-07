@@ -1,0 +1,19 @@
+{
+  "profile": "native_multiscale",
+  "tile_size": 1536,
+  "particle_diameter_scaled": null,
+  "lowpass_sigma": [
+    2,
+    4
+  ],
+  "overlap": 256,
+  "pad": 128,
+  "max_det": 2000,
+  "score_floor": 1e-05,
+  "merge_radius": 28,
+  "merge_radius_units": "native pixels",
+  "input_profile": "native_multiscale",
+  "threshold": 0.22,
+  "global_threshold": 0.22,
+  "checkpoint_sha256": "429e2fac85ea0140adce1325ae638b3d16142f192e63418a69aa6177de75f1bd"
+}

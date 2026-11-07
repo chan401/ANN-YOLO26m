@@ -1,0 +1,1190 @@
+{
+  "protocol_id": "cryo-generalization-v2",
+  "created_utc": "2026-10-30T08:09:36.904163+00:00",
+  "seed": 100282,
+  "selection": "stable filename sort; exclude every v1 image from new downloads; independent random.Random(100282).shuffle per accession; new domains first24 train,next8 val; target first20 final_check",
+  "existing_development_domains": [
+    "10028",
+    "10017",
+    "10077",
+    "10291"
+  ],
+  "additional_development_domains": [
+    "10289",
+    "10240",
+    "10760"
+  ],
+  "target_accessions": [
+    "10081",
+    "10059"
+  ],
+  "datasets": {
+    "10289": {
+      "diameter": 162,
+      "directory": "data",
+      "role": "development",
+      "title": "Cryo-EM structure of an undocked innexin-6 hemichannel in phospholipids",
+      "candidate_count": 300,
+      "excluded_v1_count": 0,
+      "candidate_sorted_sha256": "a17c32577b1b7741749920924caa83211ea5635ccaf7fc7920c30349468eb8bd",
+      "groups": {
+        "train": [
+          "INX6hemiNano108.mrc",
+          "INX6hemiNano450.mrc",
+          "INX6hemiNano201.mrc",
+          "INX6hemiNano160.mrc",
+          "INX6hemiNano785.mrc",
+          "INX6hemiNano433.mrc",
+          "INX6hemiNano183.mrc",
+          "INX6hemiNano466.mrc",
+          "INX6hemiNano841.mrc",
+          "INX6hemiNano038.mrc",
+          "INX6hemiNano803.mrc",
+          "INX6hemiNano762.mrc",
+          "INX6hemiNano283.mrc",
+          "INX6hemiNano057.mrc",
+          "INX6hemiNano144.mrc",
+          "INX6hemiNano840.mrc",
+          "INX6hemiNano236.mrc",
+          "INX6hemiNano551.mrc",
+          "INX6hemiNano741.mrc",
+          "INX6hemiNano300.mrc",
+          "INX6hemiNano500.mrc",
+          "INX6hemiNano260.mrc",
+          "INX6hemiNano125.mrc",
+          "INX6hemiNano363.mrc"
+        ],
+        "val": [
+          "INX6hemiNano224.mrc",
+          "INX6hemiNano087.mrc",
+          "INX6hemiNano779.mrc",
+          "INX6hemiNano647.mrc",
+          "INX6hemiNano145.mrc",
+          "INX6hemiNano147.mrc",
+          "INX6hemiNano014.mrc",
+          "INX6hemiNano671.mrc"
+        ]
+      }
+    },
+    "10240": {
+      "diameter": 156,
+      "directory": "data/ceramide_micrographs",
+      "role": "development",
+      "title": "afTMEM16/nanodisc complex in the presence of Ca2+ and 5mol% Ceramide 24:0",
+      "candidate_count": 299,
+      "excluded_v1_count": 0,
+      "candidate_sorted_sha256": "b96329c1fb1d9705ad53dbf039833d06bfe57e96578e31710aacb05688503317",
+      "groups": {
+        "train": [
+          "18feb07c_b1g1_00018gr_00053sq_v02_00004hln_00005enn.mrc",
+          "18feb07c_b1g1_00020gr_00049sq_v02_00018hln_00002enn.mrc",
+          "18feb07c_b1g1_00020gr_00042sq_v02_00017hln_00002enn.mrc",
+          "18feb07c_b1g1_00020gr_00042sq_v02_00003hln_00002enn.mrc",
+          "18feb07c_b1g1_00021gr_00041sq_v02_00004hln_00003enn.mrc",
+          "18feb07c_b1g1_00020gr_00050sq_v02_00002hln_00005enn.mrc",
+          "18feb07c_b1g1_00020gr_00042sq_v02_00014hln_00005enn.mrc",
+          "18feb07c_b1g1_00020gr_00050sq_v02_00011hln_00002enn.mrc",
+          "18feb07c_b1g1_00022gr_00032sq_v02_00010hln_00003enn.mrc",
+          "18feb07c_b1g1_00018gr_00047sq_v02_00011hln_00005enn.mrc",
+          "18feb07c_b1g1_00022gr_00030sq_v02_00021hln_00003enn.mrc",
+          "18feb07c_b1g1_00021gr_00033sq_v02_00019hln_00004enn.mrc",
+          "18feb07c_b1g1_00022gr_00032sq_v02_00005hln_00003enn.mrc",
+          "18feb07c_b1g1_00018gr_00052sq_v02_00004hln_00004enn.mrc",
+          "18feb07c_b1g1_00019gr_00051sq_v02_00005hln_00004enn.mrc",
+          "18feb07c_b1g1_00021gr_00038sq_v02_00010hln_00003enn.mrc",
+          "18feb07c_b1g1_00020gr_00043sq_v02_00007hln_00002enn.mrc",
+          "18feb07c_b1g1_00021gr_00055sq_v02_00004hln_00004enn.mrc",
+          "18feb07c_b1g1_00022gr_00030sq_v02_00008hln_00003enn.mrc",
+          "18feb07c_b1g1_00021gr_00033sq_v02_00019hln_00005enn.mrc",
+          "18feb07c_b1g1_00021gr_00038sq_v02_00008hln_00002enn.mrc",
+          "18feb07c_b1g1_00020gr_00043sq_v02_00011hln_00002enn.mrc",
+          "18feb07c_b1g1_00019gr_00051sq_v02_00005hln_00002enn.mrc",
+          "18feb07c_b1g1_00020gr_00049sq_v02_00008hln_00004enn.mrc"
+        ],
+        "val": [
+          "18feb07c_b1g1_00020gr_00043sq_v02_00004hln_00005enn.mrc",
+          "18feb07c_b1g1_00018gr_00053sq_v02_00002hln_00002enn.mrc",
+          "18feb07c_b1g1_00021gr_00054sq_v02_00005hln_00002enn.mrc",
+          "18feb07c_b1g1_00022gr_00027sq_v02_00009hln_00005enn.mrc",
+          "18feb07c_b1g1_00019gr_00051sq_v02_00005hln_00005enn.mrc",
+          "18feb07c_b1g1_00019gr_00051sq_v02_00007hln_00002enn.mrc",
+          "18feb07c_b1g1_00018gr_00046sq_v02_00019hln_00003enn.mrc",
+          "18feb07c_b1g1_00022gr_00027sq_v02_00018hln_00002enn.mrc"
+        ]
+      }
+    },
+    "10760": {
+      "diameter": 106,
+      "directory": "data",
+      "role": "development",
+      "title": "Structure of N-terminal deleted human pannexin-1 in nanodisc",
+      "candidate_count": 300,
+      "excluded_v1_count": 0,
+      "candidate_sorted_sha256": "116a818959724eee1f49db477d92a76c778f4a0b19a50a6ed019ed634b50c4d4",
+      "groups": {
+        "train": [
+          "Px1Ndel2-20nano200722_doseC30K40F_7750.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_7878.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7780.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7766.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_7997.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_7872.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7775.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_7886.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_8014.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7731.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_8000.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_7990.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7804.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7738.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7758.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_8013.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7790.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_7920.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_7980.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7810.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_7898.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7795.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7757.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7829.mrc"
+        ],
+        "val": [
+          "Px1Ndel2-20nano200722_doseC30K40F_7787.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7745.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_7996.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_7945.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7759.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7760.mrc",
+          "Px1Ndel2-20nano200722_doseC30K40F_7724.mrc",
+          "Px1Ndel2-20nano200728_doseC30K40F_7955.mrc"
+        ]
+      }
+    },
+    "10081": {
+      "diameter": 154,
+      "directory": "data/micrographs",
+      "role": "final_check",
+      "title": "Structure of the human HCN1 hyperpolarization-activated cyclic nucleotide-gated ion channel",
+      "candidate_count": 270,
+      "excluded_v1_count": 30,
+      "candidate_sorted_sha256": "1a0e85e14dadd243f77d8f3a7b4128efd4d6e3436f3fe4e69922156bd6fb3e88",
+      "groups": {
+        "final_check": [
+          "HCN1apo_0872_2xaligned.mrc",
+          "HCN1apo_0278_2xaligned.mrc",
+          "HCN1apo_0024_2xaligned.mrc",
+          "HCN1apo_0043_2xaligned.mrc",
+          "HCN1apo_0050_2xaligned.mrc",
+          "HCN1apo_0135_2xaligned.mrc",
+          "HCN1apo_0882_2xaligned.mrc",
+          "HCN1apo_1047_2xaligned.mrc",
+          "HCN1apo_0074_2xaligned.mrc",
+          "HCN1apo_0100_2xaligned.mrc",
+          "HCN1apo_0242_2xaligned.mrc",
+          "HCN1apo_0144_2xaligned.mrc",
+          "HCN1apo_0109_2xaligned.mrc",
+          "HCN1apo_0049_2xaligned.mrc",
+          "HCN1apo_0476_2xaligned.mrc",
+          "HCN1apo_0968_2xaligned.mrc",
+          "HCN1apo_1030_2xaligned.mrc",
+          "HCN1apo_0071_2xaligned.mrc",
+          "HCN1apo_0811_2xaligned.mrc",
+          "HCN1apo_0131_2xaligned.mrc"
+        ]
+      }
+    },
+    "10059": {
+      "diameter": 132,
+      "directory": "data/micrographs",
+      "role": "final_check",
+      "title": "Structure of TRPV1 in complex with DkTx and RTX, determined in lipid nanodisc",
+      "candidate_count": 261,
+      "excluded_v1_count": 30,
+      "candidate_sorted_sha256": "8d30118d555015f759e6ec1a2498558b92272ce83c6d7df60f1e0ebe3052cfae",
+      "groups": {
+        "final_check": [
+          "stack_0264_2x_dfpt.mrc",
+          "stack_0034_2x_dfpt.mrc",
+          "stack_0149_2x_dfpt.mrc",
+          "stack_0015_2x_dfpt.mrc",
+          "stack_0205_2x_dfpt.mrc",
+          "stack_0166_2x_dfpt.mrc",
+          "stack_0247_2x_dfpt.mrc",
+          "stack_0024_2x_dfpt.mrc",
+          "stack_0076_2x_dfpt.mrc",
+          "stack_0123_2x_dfpt.mrc",
+          "stack_0099_2x_dfpt.mrc",
+          "stack_0007_2x_dfpt.mrc",
+          "stack_0245_2x_dfpt.mrc",
+          "stack_0152_2x_dfpt.mrc",
+          "stack_0147_2x_dfpt.mrc",
+          "stack_0260_2x_dfpt.mrc",
+          "stack_0160_2x_dfpt.mrc",
+          "stack_0231_2x_dfpt.mrc",
+          "stack_0006_2x_dfpt.mrc",
+          "stack_0266_2x_dfpt.mrc"
+        ]
+      }
+    }
+  },
+  "files": [
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano108.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano108.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano450.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano450.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano201.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano201.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano160.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano160.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano785.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano785.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano433.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano433.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano183.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano183.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano466.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano466.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano841.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano841.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano038.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano038.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano803.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano803.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano762.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano762.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano283.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano283.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano057.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano057.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano144.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano144.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano840.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano840.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano236.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano236.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano551.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano551.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano741.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano741.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano300.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano300.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano500.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano500.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano260.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano260.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano125.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano125.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "train",
+      "micrograph_name": "INX6hemiNano363.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano363.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "val",
+      "micrograph_name": "INX6hemiNano224.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano224.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "val",
+      "micrograph_name": "INX6hemiNano087.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano087.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "val",
+      "micrograph_name": "INX6hemiNano779.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano779.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "val",
+      "micrograph_name": "INX6hemiNano647.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano647.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "val",
+      "micrograph_name": "INX6hemiNano145.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano145.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "val",
+      "micrograph_name": "INX6hemiNano147.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano147.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "val",
+      "micrograph_name": "INX6hemiNano014.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano014.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10289",
+      "split": "val",
+      "micrograph_name": "INX6hemiNano671.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10289/data/INX6hemiNano671.mrc",
+      "diameter": 162
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00018gr_00053sq_v02_00004hln_00005enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00018gr_00053sq_v02_00004hln_00005enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00020gr_00049sq_v02_00018hln_00002enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00020gr_00049sq_v02_00018hln_00002enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00020gr_00042sq_v02_00017hln_00002enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00020gr_00042sq_v02_00017hln_00002enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00020gr_00042sq_v02_00003hln_00002enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00020gr_00042sq_v02_00003hln_00002enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00021gr_00041sq_v02_00004hln_00003enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00021gr_00041sq_v02_00004hln_00003enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00020gr_00050sq_v02_00002hln_00005enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00020gr_00050sq_v02_00002hln_00005enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00020gr_00042sq_v02_00014hln_00005enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00020gr_00042sq_v02_00014hln_00005enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00020gr_00050sq_v02_00011hln_00002enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00020gr_00050sq_v02_00011hln_00002enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00022gr_00032sq_v02_00010hln_00003enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00022gr_00032sq_v02_00010hln_00003enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00018gr_00047sq_v02_00011hln_00005enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00018gr_00047sq_v02_00011hln_00005enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00022gr_00030sq_v02_00021hln_00003enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00022gr_00030sq_v02_00021hln_00003enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00021gr_00033sq_v02_00019hln_00004enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00021gr_00033sq_v02_00019hln_00004enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00022gr_00032sq_v02_00005hln_00003enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00022gr_00032sq_v02_00005hln_00003enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00018gr_00052sq_v02_00004hln_00004enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00018gr_00052sq_v02_00004hln_00004enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00019gr_00051sq_v02_00005hln_00004enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00019gr_00051sq_v02_00005hln_00004enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00021gr_00038sq_v02_00010hln_00003enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00021gr_00038sq_v02_00010hln_00003enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00020gr_00043sq_v02_00007hln_00002enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00020gr_00043sq_v02_00007hln_00002enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00021gr_00055sq_v02_00004hln_00004enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00021gr_00055sq_v02_00004hln_00004enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00022gr_00030sq_v02_00008hln_00003enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00022gr_00030sq_v02_00008hln_00003enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00021gr_00033sq_v02_00019hln_00005enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00021gr_00033sq_v02_00019hln_00005enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00021gr_00038sq_v02_00008hln_00002enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00021gr_00038sq_v02_00008hln_00002enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00020gr_00043sq_v02_00011hln_00002enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00020gr_00043sq_v02_00011hln_00002enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00019gr_00051sq_v02_00005hln_00002enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00019gr_00051sq_v02_00005hln_00002enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "train",
+      "micrograph_name": "18feb07c_b1g1_00020gr_00049sq_v02_00008hln_00004enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00020gr_00049sq_v02_00008hln_00004enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "val",
+      "micrograph_name": "18feb07c_b1g1_00020gr_00043sq_v02_00004hln_00005enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00020gr_00043sq_v02_00004hln_00005enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "val",
+      "micrograph_name": "18feb07c_b1g1_00018gr_00053sq_v02_00002hln_00002enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00018gr_00053sq_v02_00002hln_00002enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "val",
+      "micrograph_name": "18feb07c_b1g1_00021gr_00054sq_v02_00005hln_00002enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00021gr_00054sq_v02_00005hln_00002enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "val",
+      "micrograph_name": "18feb07c_b1g1_00022gr_00027sq_v02_00009hln_00005enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00022gr_00027sq_v02_00009hln_00005enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "val",
+      "micrograph_name": "18feb07c_b1g1_00019gr_00051sq_v02_00005hln_00005enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00019gr_00051sq_v02_00005hln_00005enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "val",
+      "micrograph_name": "18feb07c_b1g1_00019gr_00051sq_v02_00007hln_00002enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00019gr_00051sq_v02_00007hln_00002enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "val",
+      "micrograph_name": "18feb07c_b1g1_00018gr_00046sq_v02_00019hln_00003enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00018gr_00046sq_v02_00019hln_00003enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10240",
+      "split": "val",
+      "micrograph_name": "18feb07c_b1g1_00022gr_00027sq_v02_00018hln_00002enn.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10240/data/ceramide_micrographs/18feb07c_b1g1_00022gr_00027sq_v02_00018hln_00002enn.mrc",
+      "diameter": 156
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7750.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7750.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_7878.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_7878.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7780.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7780.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7766.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7766.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_7997.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_7997.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_7872.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_7872.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7775.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7775.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_7886.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_7886.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_8014.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_8014.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7731.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7731.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_8000.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_8000.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_7990.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_7990.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7804.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7804.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7738.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7738.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7758.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7758.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_8013.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_8013.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7790.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7790.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_7920.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_7920.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_7980.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_7980.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7810.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7810.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_7898.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_7898.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7795.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7795.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7757.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7757.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "train",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7829.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7829.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "val",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7787.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7787.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "val",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7745.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7745.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "val",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_7996.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_7996.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "val",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_7945.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_7945.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "val",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7759.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7759.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "val",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7760.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7760.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "val",
+      "micrograph_name": "Px1Ndel2-20nano200722_doseC30K40F_7724.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200722_doseC30K40F_7724.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10760",
+      "split": "val",
+      "micrograph_name": "Px1Ndel2-20nano200728_doseC30K40F_7955.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10760/data/Px1Ndel2-20nano200728_doseC30K40F_7955.mrc",
+      "diameter": 106
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0872_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0872_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0278_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0278_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0024_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0024_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0043_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0043_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0050_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0050_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0135_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0135_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0882_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0882_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_1047_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_1047_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0074_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0074_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0100_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0100_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0242_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0242_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0144_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0144_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0109_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0109_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0049_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0049_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0476_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0476_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0968_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0968_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_1030_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_1030_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0071_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0071_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0811_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0811_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10081",
+      "split": "final_check",
+      "micrograph_name": "HCN1apo_0131_2xaligned.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10081/data/micrographs/HCN1apo_0131_2xaligned.mrc",
+      "diameter": 154
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0264_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0264_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0034_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0034_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0149_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0149_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0015_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0015_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0205_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0205_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0166_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0166_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0247_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0247_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0024_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0024_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0076_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0076_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0123_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0123_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0099_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0099_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0007_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0007_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0245_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0245_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0152_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0152_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0147_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0147_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0260_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0260_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0160_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0160_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0231_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0231_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0006_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0006_2x_dfpt.mrc",
+      "diameter": 132
+    },
+    {
+      "dataset": "10059",
+      "split": "final_check",
+      "micrograph_name": "stack_0266_2x_dfpt.mrc",
+      "url": "https://ftp.ebi.ac.uk/empiar/world_availability/10059/data/micrographs/stack_0266_2x_dfpt.mrc",
+      "diameter": 132
+    }
+  ],
+  "target_images_in_training": false,
+  "target_GT_used_for_checkpoint_or_threshold_selection": false,
+  "historical_target_results_already_known": true,
+  "interpretation": "New micrograph-level final check on known target accessions. Target proteins/accessions excluded from ANN supervised training, but v1 target results informed development; not a pristine unseen-domain blind claim.",
+  "matching": "unchanged maximum-cardinality one-to-one; native published diameter/4; HCN1 38.5px, TRPV1 33px; identical for all methods",
+  "final_check_policy": "freeze checkpoint, global validation threshold and inference settings before opening final-check predictions; evaluate once; no target threshold scan; all failures retained"
+}

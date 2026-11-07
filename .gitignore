@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+runtime/extracted/
+*.pt
+*.pth
+*.mrc
+*.mrcs
+*.h5
+*.sav
+*.log
+.env
+runs/

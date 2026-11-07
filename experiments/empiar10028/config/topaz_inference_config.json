@@ -1,0 +1,59 @@
+{
+  "method": "Topaz official pretrained direct inference",
+  "version": "0.3.21",
+  "source_commit": "6e964b3aadb3fd34850838c04a6874bd0aee0dad",
+  "input_split": "manifests/test_100_v1/test.txt only",
+  "input_micrograph": "original MRC",
+  "preprocess": {
+    "normalization": "Topaz GMM normalization",
+    "fourier_downsample_scale": 8,
+    "expected_shape_yx": [
+      512,
+      512
+    ],
+    "expected_mrc_mode": 2,
+    "affine_normalization": false,
+    "gmm_sample": 10,
+    "gmm_max_iterations": 100,
+    "gmm_alpha": 900,
+    "gmm_beta": 1,
+    "device": -1,
+    "num_workers": 0,
+    "num_threads": 1,
+    "random_seed": 10028
+  },
+  "score_map": {
+    "command": "topaz segment",
+    "device": 0,
+    "threads": 1,
+    "patch_size": 144,
+    "effective_input_patch_px": 288,
+    "effective_scored_core_px": 256,
+    "matches_prior_extract_patch_option": 256
+  },
+  "candidate_extraction": {
+    "model": "none (consume score map)",
+    "nms_radius_preprocessed_px": 14,
+    "native_score_threshold": "-inf",
+    "coordinate_scale_up": 8,
+    "output_score": "native Topaz log-likelihood score; higher is more particle-like",
+    "candidate_limitations": "NMS suppresses peaks within radius 14 before threshold scanning; only finite NMS survivors are retained. -inf disables finite score cutoff but does not recover NMS-suppressed peaks."
+  },
+  "coordinate_transform_id": "topaz-mrc-array-y-to-cryoppp-v2",
+  "coordinates": "Topaz score-map integer pixel x/y is multiplied by 8 and rounded by Topaz CLI. To match the frozen CryoPPP 0-based original-image convention: x_original=x_topaz and y_original=(4096-1)-y_topaz. Native score is unchanged.",
+  "threshold_selection": "Previously fixed validation threshold; no test selection or scan",
+  "model_identifier": "resnet16_u64",
+  "checkpoint_path": "/root/autodl-tmp/cryoem_baselines/topaz/topaz/pretrained/detector/resnet16_u64.sav",
+  "checkpoint_sha256": "00d224629a5dc0c2dc122cca11e47c25f5f850d08f9e7f71f54bcf8037d52c46",
+  "weight_loading": "topaz segment --model resnet16_u64 resolves the official packaged detector state_dict through topaz.model.factory.load_model; it does not torch.load the path as a model object",
+  "segment_compatibility_bridge": "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/test_100_v1_three_methods/topaz_runtime_compat/sitecustomize.py",
+  "segment_compatibility_bridge_sha256": "2840709f8cfcf2959c1c8996714ea557a5b92e20d4978a792322a64f2ff22de0",
+  "outlier_source_handling": {
+    "micrograph": "080.mrc",
+    "source_transform_id": "robust_clip_p1_p99_10span_v1",
+    "source_path": "/root/autodl-tmp/cryoem_datasets/EMPIAR-10028/experiments/baselines_v3_cpu/topaz/repaired_source/080_robust_clip.mrc",
+    "rule": "replace source pixels outside [P1-10*(P99-P1), P99+10*(P99-P1)] with bound; existing preprocessing audit records 33 high pixels clipped; original and GT unchanged"
+  },
+  "execution_device": "GPU:0; FP32; no TensorFloat32",
+  "outlier_exception_not_used": "080.mrc is not a test100 member; all100 use original MRC sources"
+}
