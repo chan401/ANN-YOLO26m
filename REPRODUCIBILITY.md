@@ -34,7 +34,7 @@ The research snapshots in `experiments/generalization/` map to `/root/autodl-tmp
 - For the low-SNR continuation, see `v3_low_snr/code/initialize.py`, `train_low_snr.py` and `select_evaluate.py`. The scripts depend on the earlier source registry, prepared data and v2 checkpoint. The protocol and freeze files identify the target batch and source-side threshold selection.
 - Dataset-specific radii and target memberships are recorded in the corresponding freeze files. HCN1 and TRPV1 experiments must be interpreted using their own frozen variant and batch.
 
-Historical workflow scripts use original paths and some require intermediate outputs of earlier stages. Standalone inference is the direct entry point when the matching fitted checkpoint is available. No weights or intermediate training products are packaged.
+Historical workflow scripts use original paths and some require intermediate outputs of earlier stages. Standalone inference is the direct entry point when the matching fitted checkpoint is available. The generalized v2 and v3 checkpoints are available from the [submission release](https://github.com/chan401/ANN-YOLO26m/releases/tag/paper-inference-v1). The experiment snapshots and other checkpoint requirements are documented above.
 
 ## EMPIAR-10017 historical scripts
 

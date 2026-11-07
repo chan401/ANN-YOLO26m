@@ -1,18 +1,10 @@
 # ANN-YOLO26m
 
-Research code and reproducibility materials for single-particle picking in cryo-electron microscopy micrographs. The workflow reads MRC images, normalizes grayscale intensities in float32, detects particles in overlapping tiles, and maps merged particle centers back to the original image coordinates.
+ANN-YOLO26m picks single-particle centers from cryo-EM MRC micrographs. It applies robust grayscale normalization, predicts on overlapping tiles, and merges detections in the original image coordinate system.
 
-| Component | Location |
-| --- | --- |
-| EMPIAR-10028 training, validation and frozen 100-image test | [experiments/empiar10028](experiments/empiar10028) |
-| Seven-source generalization and low-SNR continuation | [experiments/generalization](experiments/generalization) |
-| Standalone MRC inference and checkpoint identities | [inference](inference) |
-| EMPIAR-10017 historical training and coordinate export | [experiments/empiar10017](experiments/empiar10017) |
-| Dataset membership and input fingerprints | [manifests](manifests) |
+## 1. Install
 
-## Inference
-
-Use Python 3.12 with a CUDA-capable GPU. The benchmark runtime was PyTorch 2.5.1 with CUDA 12.4 and Ultralytics 8.4.8. The archived Ultralytics source and its upstream license are under [runtime](runtime). Run the following from the repository root on Linux:
+Use Linux, Python 3.12, and a CUDA-capable NVIDIA GPU. Run from the repository root:
 
 ```bash
 python -m venv .venv
@@ -21,18 +13,29 @@ python -m pip install torch==2.5.1 torchvision==0.20.1 --index-url https://downl
 python -m pip install -r requirements.txt
 python -m zipfile -e runtime/ultralytics_runtime_source.zip runtime/extracted
 export PYTHONPATH="$PWD/runtime/extracted${PYTHONPATH:+:$PYTHONPATH}"
+```
 
+## 2. Download a trained checkpoint
+
+| Checkpoint | Intended use | Inference configuration |
+| --- | --- | --- |
+| [Generalization v2](https://github.com/chan401/ANN-YOLO26m/releases/download/paper-inference-v1/ann-yolo26m-generalization-v2.pt) | Default model trained on seven source datasets | [v2 config](inference/v2/model_configuration.json) |
+| [Generalization v3 low-SNR](https://github.com/chan401/ANN-YOLO26m/releases/download/paper-inference-v1/ann-yolo26m-generalization-v3-low-snr.pt) | v2 continued with source-side contrast and noise augmentation | [v3 config](inference/v3_low_snr/model_configuration.json) |
+
+Each inference script checks the weight file against the SHA-256 in its configuration. See the [submission release](https://github.com/chan401/ANN-YOLO26m/releases/tag/paper-inference-v1) for the full checksums.
+
+## 3. Run particle picking
+
+Save the v2 checkpoint in the repository root or update the path passed to `--weights`.
+
+```bash
 python inference/v2/predict_particles.py \
   --config inference/v2/model_configuration.json \
-  --weights /path/to/v2/best.pt \
+  --weights ann-yolo26m-generalization-v2.pt \
   --input /path/to/micrographs \
   --output picks-v2 --device 0
 ```
 
-The low-SNR continuation uses the corresponding files under `inference/v3_low_snr/`. The scripts require the checkpoint that matches the selected configuration's SHA-256. TXT results use zero-based MRC array coordinates (x is the column, y is the row); CSV results include both MRC and CryoPPP coordinates.
+For v3, use the script and configuration under `inference/v3_low_snr/` with the v3 checkpoint. The input can be an MRC file or a directory of MRC micrographs. Output includes per-image TXT coordinates and a combined predictions CSV. TXT coordinates are zero-based in the original MRC array (x is column, y is row). The CSV also includes CryoPPP coordinates and scores.
 
-## Reproducing the experiments
-
-See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for input sources, folder layout, commands and experiment boundaries. This release contains code, configurations and manifests. Obtain micrographs and annotations from their archives and provide the appropriate initialization or fitted checkpoint separately. Exact frozen benchmark inference requires the original fitted checkpoints. `SOURCE_SNAPSHOT.json` records the SHA-256 of each file collected from the research server.
-
-The Ultralytics runtime retains its upstream AGPL-3.0 license in [runtime/LICENSE](runtime/LICENSE).
+For the paper's experiment settings, input manifests and evaluation workflow, see [Reproducibility](REPRODUCIBILITY.md). The [runtime license](runtime/LICENSE) applies to the archived Ultralytics runtime.
