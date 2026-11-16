@@ -1,0 +1,64 @@
+{
+  "created_unix": 1794831461.0574908,
+  "kind": "retrospective verification of an existing historical checkpoint, NOT a new training result",
+  "checkpoint": "/root/autodl-tmp/cryoem_generalization/v3_low_snr/selections/best.pt",
+  "checkpoint_sha256": "429e2fac85ea0140adce1325ae638b3d16142f192e63418a69aa6177de75f1bd",
+  "global_threshold": 0.22,
+  "same_current_images_and_GT": true,
+  "independent_forward_rerun": false,
+  "cached_prediction_integrity_verified": true,
+  "matching_recomputed": true,
+  "source_selected_historical_weight": true,
+  "target_results_previously_known": true,
+  "proof": [
+    {
+      "path": "/root/autodl-tmp/cryoem_generalization/v3_low_snr/results/ANN_v3/predictions.csv",
+      "predictions_sha256": "7bbc5a80cf0e1882d4fa3004231b9d0193b433203b2a8891ce2376f9c7b4a9c8",
+      "checkpoint_sha256": "429e2fac85ea0140adce1325ae638b3d16142f192e63418a69aa6177de75f1bd"
+    },
+    {
+      "path": "/root/autodl-tmp/cryoem_generalization/v3_low_snr/results/ANN_v3_HCN1_regression/predictions.csv",
+      "predictions_sha256": "fedacfaca3d45e5eda73f8de2aba9d69b888c2f6a1d1b558401867a21e624136",
+      "checkpoint_sha256": "429e2fac85ea0140adce1325ae638b3d16142f192e63418a69aa6177de75f1bd"
+    }
+  ],
+  "comparisons": [
+    {
+      "dataset": "10081",
+      "ANN": {
+        "TP": 2103,
+        "FP": 691,
+        "FN": 225,
+        "Precision": 0.7526843235504653,
+        "Recall": 0.9033505154639175,
+        "F1": 0.8211636079656385,
+        "GT": 2328,
+        "Predictions": 2794
+      },
+      "differences": {
+        "crYOLO": 0.045558226799719215,
+        "Topaz": 0.2804294987445105
+      },
+      "pass_both": true
+    },
+    {
+      "dataset": "10059",
+      "ANN": {
+        "TP": 4971,
+        "FP": 1038,
+        "FN": 8111,
+        "Precision": 0.8272591113330005,
+        "Recall": 0.3799877694542119,
+        "F1": 0.5207689487192918,
+        "GT": 13082,
+        "Predictions": 6009
+      },
+      "differences": {
+        "crYOLO": 0.005692283761469019,
+        "Topaz": 0.345774731740342
+      },
+      "pass_both": true
+    }
+  ],
+  "all_tests_F1_above_both": true
+}

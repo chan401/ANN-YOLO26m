@@ -71,7 +71,7 @@ def predict(model,path,threshold,unsigned_mode0=False,device=0,profile='native_m
  for iy,y0 in enumerate(ys):
   for ix,x0 in enumerate(xs):
    tile=np.ascontiguousarray(image[y0:y0+SIZE,x0:x0+SIZE]);tensor=torch.from_numpy(channels(tile,profile)[None]).to('cuda:'+str(device))
-   r=model.predict(tensor,imgsz=SIZE,device=device,conf=SCORE_FLOOR,max_det=2000,half=False,augment=False,verbose=False)[0]
+   r=model.predict(tensor,imgsz=SIZE,device=device,conf=SCORE_FLOOR,iou=0.7,end2end=True,max_det=2000,half=False,augment=False,verbose=False)[0]
    xywh=r.boxes.xywh.detach().cpu().numpy();scores=r.boxes.conf.detach().cpu().numpy();tile_counts.append(len(scores))
    for (x,y,w,h),s in zip(xywh,scores):
     xx,yy=float(x)+x0,float(y)+y0;ox,oy=restore(xx,yy,meta)

@@ -1,0 +1,104 @@
+{
+  "status": "complete",
+  "completed_unix": 1794831619.978866,
+  "checkpoint": "/root/autodl-tmp/cryoem_generalization/v3_low_snr/selections/best.pt",
+  "checkpoint_sha256": "429e2fac85ea0140adce1325ae638b3d16142f192e63418a69aa6177de75f1bd",
+  "global_threshold": 0.22,
+  "kind": "Fresh forward verification of a historical LowSNR model, not a newly trained result",
+  "retrospective_known_benchmarks": true,
+  "same_weight_and_threshold_for_both": true,
+  "current_A3_results_unchanged": true,
+  "inference_contract": {
+    "checkpoint_sha256": "429e2fac85ea0140adce1325ae638b3d16142f192e63418a69aa6177de75f1bd",
+    "mode": "native_multiscale",
+    "image_keys": [
+      "10081__f1c8aec09011894e0d4f",
+      "10081__d8ca6c38548cb687b0da",
+      "10081__223277fbe1a28c843ed8",
+      "10081__78eb6d1c485569c77342",
+      "10081__6439fa23d530890f3134",
+      "10081__9ecedf7f2c4d6499b5de",
+      "10081__5dfaabd10b73e8bb5a57",
+      "10081__d5b8375bb14f237031f5",
+      "10081__f770f53c8e8f650edbde",
+      "10081__66b76e72fad3cbd60641",
+      "10081__0f1d9b0796e4e832ba8d",
+      "10081__302b5f517369e1a6c01d",
+      "10081__027401481b0d4a8a34c7",
+      "10081__6800bc7979a0d9f10ec0",
+      "10081__9418dfcf88fa8b9ff387",
+      "10081__889a5622d7574eaa09f3",
+      "10081__53617c0bd468dee0dd50",
+      "10081__2845effd3a2af25e83fb",
+      "10081__069b9f4fed6ee02d828b",
+      "10081__4c505e687dfb082b0a90",
+      "10059__13d6a417edb10f784a28",
+      "10059__6d5dfab34b1b429ef6e6",
+      "10059__1116d659435c0ee78be7",
+      "10059__d7779ad8929fccf02e5b",
+      "10059__34cc62c0b8e8f599281b",
+      "10059__ccec12daeaf0e1cc5faf",
+      "10059__3fcc0df7e4d40a7109ab",
+      "10059__0776f1fc842293e208d5",
+      "10059__f0eeb3f90cea985d756f",
+      "10059__90732c0fe17278bcd85f",
+      "10059__bdf4c26f96222e8c1bd6",
+      "10059__bba7593f1c1abc19aae6",
+      "10059__0f199a6c7a2a8299ca20",
+      "10059__afd737fedc81f0d79084",
+      "10059__5bd3065e5e7d152ac702",
+      "10059__5f5b61014d42c933a82f",
+      "10059__ca62743e136d531b5576",
+      "10059__90e56ecd310f2e8ef02e",
+      "10059__22cc991a5efc82ca584a",
+      "10059__9cadd579a44530a42454"
+    ],
+    "end2end": true,
+    "iou": 0.7,
+    "score_floor": 1e-05,
+    "max_det": 2000,
+    "center_merge_radius": 28,
+    "tile_size": 1536,
+    "overlap": 256,
+    "padding": 128
+  },
+  "tests": [
+    {
+      "dataset": "10081",
+      "ANN": {
+        "TP": 2104,
+        "FP": 691,
+        "FN": 224,
+        "Precision": 0.7527728085867621,
+        "Recall": 0.9037800687285223,
+        "F1": 0.8213937146203397,
+        "GT": 2328,
+        "Predictions": 2795
+      },
+      "F1_differences": {
+        "crYOLO": 0.04578833345442046,
+        "Topaz": 0.28065960539921175
+      },
+      "pass_both": true
+    },
+    {
+      "dataset": "10059",
+      "ANN": {
+        "TP": 4972,
+        "FP": 1037,
+        "FN": 8110,
+        "Precision": 0.8274255283741055,
+        "Recall": 0.38006421036538757,
+        "F1": 0.5208737101251899,
+        "GT": 13082,
+        "Predictions": 6009
+      },
+      "F1_differences": {
+        "crYOLO": 0.005797045167367121,
+        "Topaz": 0.3458794931462401
+      },
+      "pass_both": true
+    }
+  ],
+  "all_tests_F1_above_both": true
+}

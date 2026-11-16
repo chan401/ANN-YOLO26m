@@ -1,0 +1,7 @@
+{
+  "checkpoint_sha256": "429e2fac85ea0140adce1325ae638b3d16142f192e63418a69aa6177de75f1bd",
+  "global_threshold": 0.22,
+  "repository_inference_script_sha256": "44a8cfe04bac0e3ebb3942e58a35089b45ac08ffee473f16ef7f08201a3e677d",
+  "tested_package_script_sha256": "c03beba51db79b5f8d2a30b4acc9395c95b3733571abde52dae2bec6b8e73cd1",
+  "script_relation": "Same UTF-8 source text; repository normalizes line endings to LF. Package check retains the actual tested package-byte hash."
+}

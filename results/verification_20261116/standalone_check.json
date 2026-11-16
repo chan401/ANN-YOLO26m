@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "time_unix": 1794831826.023223,
+  "standalone_script_sha256": "c03beba51db79b5f8d2a30b4acc9395c95b3733571abde52dae2bec6b8e73cd1",
+  "all_40_image_and_GT_hashes_verified": true,
+  "standalone_count_checks": [
+    {
+      "dataset": "10081",
+      "micrograph_name": "HCN1apo_0024_2xaligned.mrc",
+      "picks": 137,
+      "matches_full_forward_count": true,
+      "input_hash_verified": true
+    },
+    {
+      "dataset": "10059",
+      "micrograph_name": "stack_0196_2x_dfpt.mrc",
+      "picks": 271,
+      "matches_full_forward_count": true,
+      "input_hash_verified": true
+    }
+  ]
+}

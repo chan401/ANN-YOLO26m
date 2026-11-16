@@ -15,5 +15,9 @@
   "input_profile": "native_multiscale",
   "threshold": 0.22,
   "global_threshold": 0.22,
-  "checkpoint_sha256": "429e2fac85ea0140adce1325ae638b3d16142f192e63418a69aa6177de75f1bd"
+  "checkpoint_sha256": "429e2fac85ea0140adce1325ae638b3d16142f192e63418a69aa6177de75f1bd",
+  "end2end": true,
+  "iou": 0.7,
+  "verification_date": "2026-11-16",
+  "verification_scope": "Retrospective HCN1 and TRPV1 benchmarks; a historical weight, not newly trained"
 }
