@@ -6,7 +6,7 @@ ANN-YOLO26m picks single-particle centers from cryo-EM MRC micrographs using rob
 
 Use **ANN-YOLO26m-LowSNR.pt** with `inference/v3_low_snr/model_configuration.json`. HCN1 and TRPV1 use the **same weight and global threshold 0.22**.
 
-[Download the pretrained weight](https://github.com/chan401/ANN-YOLO26m/releases/download/paper-submission-v1/ANN-YOLO26m-LowSNR.pt)
+[Download the pretrained weight](https://github.com/chan401/ANN-YOLO26m/releases/download/paper-submission-v1.1/ANN-YOLO26m-LowSNR.pt)
 
 SHA-256:
 
@@ -52,4 +52,4 @@ For the EMPIAR-10059/TRPV1 mode-0 micrographs used in the evaluation, add `--uns
 
 Input may be an MRC file or a directory. Output contains per-image TXT coordinates and a combined CSV. TXT coordinates are zero-based in the original MRC array: x is column, y is row. CSV also includes CryoPPP coordinates and scores. The output directory must be empty. Inference requires no GT and verifies the weight SHA-256 before loading.
 
-See the [model card](MODEL_CARD.md) for input settings and evaluation scope, [Reproducibility](REPRODUCIBILITY.md) for experiment configurations, and the [paper release](https://github.com/chan401/ANN-YOLO26m/releases/tag/paper-submission-v1) for downloads. The EMPIAR-10028 comparison uses its own dataset-specific checkpoint and [100-image test set](manifests/empiar10028/test_100_v1/test.txt). The [runtime license](runtime/LICENSE) applies to the archived Ultralytics source.
+See the [model card](MODEL_CARD.md) for input settings and evaluation scope, [Reproducibility](REPRODUCIBILITY.md) for experiment configurations, and the [paper release](https://github.com/chan401/ANN-YOLO26m/releases/tag/paper-submission-v1.1) for downloads. The EMPIAR-10028 comparison uses its own dataset-specific checkpoint and [100-image test set](manifests/empiar10028/test_100_v1/test.txt). The [runtime license](runtime/LICENSE) applies to the archived Ultralytics source.
