@@ -1,6 +1,5 @@
 # Reproducibility
 
-**Correction, 2026-11-16:** HCN1 F1=0.8212 and TRPV1 F1=0.5208 can both be obtained from the same historical LowSNR/v3 checkpoint (`429e2fac85ea0140adce1325ae638b3d16142f192e63418a69aa6177de75f1bd`) at global threshold 0.22. The earlier mapping omitted the v3 HCN1 regression check. Use the LowSNR instructions below for these two reported results. [Provenance](MODEL_PROVENANCE.md) separates historical predictions, the new forward verification and the unsuccessful later A3 retraining.
 
 ## Data and checkpoints
 
@@ -47,7 +46,7 @@ The research snapshots in `experiments/generalization/` map to `/root/autodl-tmp
 - For the low-SNR continuation, see `v3_low_snr/code/initialize.py`, `train_low_snr.py` and `select_evaluate.py`. The scripts depend on the earlier source registry, prepared data and v2 checkpoint. The protocol and freeze files identify the target batch and source-side threshold selection.
 - Dataset-specific radii and target memberships are recorded in the corresponding freeze files. For the single-LowSNR-checkpoint pair, use the v3 registry: TRPV1 `final_check` has 20 images / 13082 GT, and HCN1 `regression_check` has 20 images / 2328 GT. Do not mix the older v2 TRPV1 batch of 13424 GT with this v3 batch.
 
-Historical workflow scripts use original paths and some require intermediate outputs of earlier stages. Standalone inference is the direct entry point when the matching fitted checkpoint is available. Use [ANN-YOLO26m-LowSNR.pt](https://github.com/chan401/ANN-YOLO26m/releases/download/paper-submission-v1.1/ANN-YOLO26m-LowSNR.pt) with `inference/v3_low_snr/model_configuration.json` for **both** reported HCN1 and TRPV1 LowSNR results. The same weight and threshold apply to both; only the recorded mode-0 storage interpretation requires `--unsigned-mode0` for the TRPV1 inputs. General/v2 remains a separate historical comparison and cannot be substituted for this pair.
+Historical workflow scripts use original paths and some require intermediate outputs of earlier stages. Standalone inference is the direct entry point when the matching fitted checkpoint is available. Use [ANN-YOLO26m-LowSNR.pt](https://github.com/chan401/ANN-YOLO26m/releases/download/paper-submission-v1/ANN-YOLO26m-LowSNR.pt) with `inference/v3_low_snr/model_configuration.json` for **both** reported HCN1 and TRPV1 LowSNR results. The same weight and threshold apply to both; only the recorded mode-0 storage interpretation requires `--unsigned-mode0` for the TRPV1 inputs. General/v2 remains a separate historical comparison and cannot be substituted for this pair.
 
 The LowSNR source-validation macro F1 is 0.733290859969671; 0.7341986413334569 is the earlier v2 selection. The [low-SNR protocol](experiments/generalization/v3_low_snr/protocol.json) specifies 20 continuation epochs, learning rate 5e-5 and source-only contrast/noise augmentation. It also discloses known target-domain development. The [secondary HCN1 protocol](experiments/generalization/v3_low_snr/secondary_HCN1_protocol.json) identifies the same-v3 regression check, distinct from the retained v2 archive.
 
@@ -55,4 +54,4 @@ The LowSNR source-validation macro F1 is 0.733290859969671; 0.7341986413334569 i
 
 [Verification records](results/verification_20261116/README.md) include archived-prediction integrity checks and a separate fresh forward run. Historical ANN counts and paper scores are retained; the fresh HCN1/TRPV1 F1 values are 0.8213937146203397 and 0.5208737101251899, each differing from historical predictions by one matched particle. No target-threshold scan or retraining was performed for this recheck. These known-benchmark point estimates are not a guarantee of general superiority or an independent unknown-domain test.
 
-Historical tags, experiment freezes and `SOURCE_SNAPSHOT.json` remain unchanged. `paper-submission-v1.1` records the documentation correction, explicit inference flags and new verification separately.
+Experiment freezes and `SOURCE_SNAPSHOT.json` identify their recorded source versions. The current model entry point explicitly fixes the inference flags; the separate verification records identify its checksums.

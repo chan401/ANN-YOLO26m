@@ -1,16 +1,17 @@
-# LowSNR forward verification and historical audit
+# Forward verification on 2026-11-16
 
-These records distinguish a historical prediction audit from a new forward pass on known benchmark micrographs. They do not report a newly trained model or a new domain-blind evaluation.
+This evaluation applies the single LowSNR checkpoint and threshold 0.22 to the same 20 HCN1 and 20 TRPV1 micrographs. No weight updates or threshold scans are performed for the verification.
 
-| File | Meaning |
+| File | Content |
 | --- | --- |
-| `historical_prediction_audit.json` | Matching metrics recomputed from historical predictions; prediction hashes and the shared weight hash were checked. |
-| `forward_verification.json` | New 40-image forward result using the historical checkpoint and threshold 0.22; includes the inference contract. |
-| `metrics.csv` | Fresh ANN counts and historical pretrained-baseline counts on the same images, GT and baseline settings. |
-| `standalone_check.json` | Independent entry point checked on one image per target; retained counts match the full forward run. All 40 actual MRC and GT hashes were checked. |
+| `metrics.csv` | Fresh ANN counts and same-batch pretrained-baseline counts. |
+| `forward_verification.json` | Weight identity, inference settings and per-target comparisons. |
+| `historical_prediction_audit.json` | Integrity checks and metric recomputation for the paper-evaluation prediction archives. |
+| `standalone_check.json` | Independent entry-point checks on one image per target and verification of all 40 actual MRC and GT hashes. |
+| `repository_manifest.json` | Repository and tested-package entry-point fingerprints. |
 
-The [v3 registry](../../experiments/generalization/v3_low_snr/image_registry.json) contains TRPV1 `final_check` and HCN1 `regression_check` membership: 20 images per target, 13082 and 2328 GT particles respectively. Matching is maximum-cardinality one-to-one center matching at 33 and 38.5 native pixels. Baseline prediction and model hashes were verified and baseline counts reused; baseline forward inference was not rerun on 2026-11-16.
+The [v3 registry](../../experiments/generalization/v3_low_snr/image_registry.json) records HCN1 `regression_check` and TRPV1 `final_check` membership. Matching uses maximum-cardinality one-to-one centers with 38.5 / 33 native-pixel radii. Baseline prediction and model hashes were verified and counts reused; baseline forward inference was not rerun on this date.
 
-Historical ANN counts remain HCN1 2103/691/225 and TRPV1 4971/1038/8111 (TP/FP/FN). Fresh counts are 2104/691/224 and 4972/1037/8110. The causes of these one-match differences have not been isolated.
+Paper-evaluation ANN counts are HCN1 2103/691/225 and TRPV1 4971/1038/8111 (TP/FP/FN). Fresh counts are 2104/691/224 and 4972/1037/8110. The one-match differences have not been attributed to a specific cause; both records are retained.
 
-The separate A3 retraining (`f65067ce2a1f7cef0fc44175c7ab259c39a0fe8ac41e575d9142f54f0c6855b1`) did not exceed crYOLO: F1=0.7689169895982052 on HCN1 and 0.40437031440692744 on TRPV1 at its source-selected threshold 0.20. This is not the LowSNR checkpoint verified here. See [model provenance](../../MODEL_PROVENANCE.md).
+These are known benchmark checks. See the [model card](../../MODEL_CARD.md) for interpretation and scope. Separate development-run metadata is stored in [development_A3_20261116.json](../development_A3_20261116.json); it identifies a different checkpoint.

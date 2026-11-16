@@ -1,0 +1,10 @@
+{
+  "checkpoint_sha256": "f65067ce2a1f7cef0fc44175c7ab259c39a0fe8ac41e575d9142f54f0c6855b1",
+  "global_threshold": 0.2,
+  "kind": "Separate A3 development retraining; not the published LowSNR checkpoint",
+  "F1": {
+    "HCN1": 0.7689169895982052,
+    "TRPV1": 0.40437031440692744
+  },
+  "exceeds_crYOLO_on_both": false
+}
